@@ -35,10 +35,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" spacing="147" translatesAutoresizingMaskIntoConstraints="NO" id="4QS-Ml-VNE">
-                                <rect key="frame" x="-0.5" y="211" width="375.5" height="245"/>
+                                <rect key="frame" x="-0.5" y="213" width="375.5" height="241"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Top" textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Um-Sz-fjm">
-                                        <rect key="frame" x="156" y="0.0" width="64" height="49"/>
+                                        <rect key="frame" x="119.5" y="0.0" width="137" height="47"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -49,8 +49,8 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bottom" textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OTZ-qw-IFB">
-                                        <rect key="frame" x="126.5" y="196" width="122.5" height="49"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="119.5" y="194" width="137" height="47"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                         <userDefinedRuntimeAttributes>
@@ -60,25 +60,26 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="3Um-Sz-fjm" firstAttribute="width" secondItem="OTZ-qw-IFB" secondAttribute="width" id="LBl-0Q-2QU"/>
+                                </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcF-Va-NCI">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="FVD-lr-56n"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="wNT-Py-aK4"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="i2t-XN-h9D"/>
                                     <barButtonItem title="Gallery" id="P1Y-gN-as8">
                                         <connections>
                                             <action selector="pickFromGallery:" destination="BYZ-38-t0r" id="xzS-dV-NJ8"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="dyU-S3-g5X"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Mdz-Dd-vaH"/>
                                     <barButtonItem systemItem="camera" id="CSv-wV-GRz">
                                         <connections>
                                             <action selector="pickFromCamera:" destination="BYZ-38-t0r" id="63l-ko-RG7"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="kXY-Rm-UlQ"/>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="A5s-9m-c1i"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4uT-Ey-If4"/>
                                 </items>
                             </toolbar>
                         </subviews>

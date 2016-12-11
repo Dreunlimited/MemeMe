@@ -31,10 +31,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         buttomTextField.delegate = self
         setTextField(topTextField)
         setTextField(buttomTextField)
-        
-        buttomTextField.textAlignment = .center
-        topTextField.textAlignment = .center
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,10 +48,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     @IBAction func pickFromGallery(_ sender: Any) {
-        imagePickerProcess(0)
+        imagePickerProcess(.photoLibrary)
     }
     @IBAction func pickFromCamera(_ sender: Any) {
-        imagePickerProcess(1)
+        imagePickerProcess(.camera)
     }
     
     @IBAction func shareMeme(_ sender: Any) {
@@ -83,7 +79,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     func subscribeToKeyboardNotifications() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name:  .UIKeyboardWillHide, object: nil)
     }
     
@@ -139,19 +134,16 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerProcess(_ sourceIndex: Int){
+    func imagePickerProcess(_ chosenSource: UIImagePickerControllerSourceType){
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        imagePicker.sourceType = chosenSource
         present(imagePicker, animated: true, completion: nil)
-        if sourceIndex == 0 {
-            imagePicker.sourceType = .photoLibrary
-        } else {
-            imagePicker.sourceType = .camera
-        }
-    }
+}
     
     func setTextField(_ textField: UITextField) {
         textField.defaultTextAttributes = textAttributes
+        textField.textAlignment = .center
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
