@@ -22,7 +22,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
-        NSStrokeWidthAttributeName: 0] as [String : Any]
+        NSStrokeWidthAttributeName: -1] as [String : Any]
     
     
     override func viewDidLoad() {
