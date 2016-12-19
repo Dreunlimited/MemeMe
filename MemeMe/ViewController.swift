@@ -31,6 +31,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         buttomTextField.delegate = self
         setTextField(topTextField)
         setTextField(buttomTextField)
+        
+        self.view.backgroundColor = UIColor.black
+        galleryButton.isHidden = false
+       
+        self.tabBarController?.tabBar.isHidden = true
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +45,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         
         subscribeToKeyboardNotifications()
+        
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -60,6 +68,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         ac.completionWithItemsHandler = { activity, success, items, error in
             if success {
                 self.save()
+                
             } else {
                 print(error as Any)
             }
@@ -73,6 +82,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     func save() {
         meme = Meme(topTextField: topTextField.text, bottomTextField: buttomTextField.text, originalImage:  memeImageView.image, memedImage: generateMemedImage())
+         (UIApplication.shared.delegate as? AppDelegate)?.meme.append(meme)
     }
     
     

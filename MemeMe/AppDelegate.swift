@@ -13,6 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var meme = [Meme]()
+    
+//    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//    func pushToMeme() {
+//        let createMeme = mainStoryboard.instantiateViewController(withIdentifier: "createMeme") as! ViewController
+//        navigationController?.pushViewController(createMeme, animated: true)
+//    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
