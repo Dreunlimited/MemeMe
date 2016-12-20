@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate  {
+class MemeEditorViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate  {
     
     
     @IBOutlet weak var buttomTextField: UITextField!
@@ -22,7 +22,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
-        NSStrokeWidthAttributeName: -1] as [String : Any]
+        NSStrokeWidthAttributeName: -3.0] as [String : Any]
     
     
     override func viewDidLoad() {
@@ -68,7 +68,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         ac.completionWithItemsHandler = { activity, success, items, error in
             if success {
                 self.save()
-                
+                _ = self.navigationController?.popViewController(animated: true)
             } else {
                 print(error as Any)
             }

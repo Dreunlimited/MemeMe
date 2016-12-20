@@ -27,18 +27,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oZN-Nf-err">
-                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oZN-Nf-err">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="arr-fB-PEZ"/>
-                                    <constraint firstAttribute="width" constant="200" id="sMr-TP-s3s"/>
+                                    <constraint firstAttribute="width" constant="375" id="IcW-fK-eYH"/>
+                                    <constraint firstAttribute="height" constant="603" id="sCX-94-d8j"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oZN-Nf-err" firstAttribute="centerX" secondItem="roV-iL-rSz" secondAttribute="centerX" id="OgV-8v-e0F"/>
-                            <constraint firstItem="oZN-Nf-err" firstAttribute="centerY" secondItem="roV-iL-rSz" secondAttribute="centerY" id="fjo-xr-bzh"/>
+                            <constraint firstItem="xbc-TG-AWy" firstAttribute="top" secondItem="oZN-Nf-err" secondAttribute="bottom" id="13n-qz-fVc"/>
+                            <constraint firstItem="oZN-Nf-err" firstAttribute="top" secondItem="6Y3-Dh-fit" secondAttribute="bottom" id="7CW-iL-koP"/>
+                            <constraint firstItem="oZN-Nf-err" firstAttribute="leading" secondItem="roV-iL-rSz" secondAttribute="leading" id="86Q-ut-11l"/>
+                            <constraint firstAttribute="trailing" secondItem="oZN-Nf-err" secondAttribute="trailing" id="TCq-Wd-wtd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R7M-YS-u6B"/>
@@ -48,12 +50,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oN4-Mv-Upo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380" y="184"/>
+            <point key="canvasLocation" x="1380" y="183.95802098950526"/>
         </scene>
         <!--Meme-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="createMeme" id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createMeme" id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -70,11 +72,11 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" spacing="147" translatesAutoresizingMaskIntoConstraints="NO" id="4QS-Ml-VNE">
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="147" translatesAutoresizingMaskIntoConstraints="NO" id="4QS-Ml-VNE">
                                 <rect key="frame" x="-0.5" y="213" width="375.5" height="241"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Top" textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Um-Sz-fjm">
-                                        <rect key="frame" x="153" y="0.0" width="69.5" height="47"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375.5" height="47"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -85,7 +87,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bottom" textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OTZ-qw-IFB">
-                                        <rect key="frame" x="119.5" y="194" width="137" height="47"/>
+                                        <rect key="frame" x="0.0" y="194" width="375.5" height="47"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -254,7 +256,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="118" height="104"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="135" height="124"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="118" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9If-kW-Nwp">
